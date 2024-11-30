@@ -1,14 +1,26 @@
 # Handwritten Amharic Character Recognition through Transfer Learning: Integrating CNN Models and Machine Learning Classifiers.
+
 ## Overview
 
 This project focuses on automating the recognition of handwritten **Amharic characters**, which are a part of the Ethiopian script. The Amharic script consists of 238 unique characters, including 34 basic characters with seven variations representing different vowel sounds. Due to the syllabic nature of the script and variations in handwriting styles, recognizing handwritten Amharic characters is a challenging task. In this project, we employ four convolutional neural network (CNN) architectures—**AlexNet**, **VGG16**, **VGG19**, and **ResNet50**—using transfer learning to improve recognition accuracy.
 
 ## Methodology
 
-1. **Data Collection & Preprocessing**:  
-   The dataset consists of handwritten Amharic characters. Images are resized to **28x28** pixels and preprocessed to ensure consistency in input for the models.
+1. **Dataset Overview**:  
 
-2. **Models Used**:
+- **Total Samples**: 37,752
+- **Training Samples**: 30,201
+- **Validation Samples**: 7,551
+- **Image Size**: 28x28 pixels
+- **Image Type**: JPEG
+
+2. **Data Augmentation**:  
+   To enhance the robustness and generalization of the models, several **data augmentation** techniques are employed on-the-fly during training, rather than pre-saving new images. These techniques include:
+   - **Random Rotation**: The images are randomly rotated within an angle range of ±10 degrees to introduce variability in orientation.
+   - **Affine Transformations**: Techniques such as translation (shifting) by 10% of the image dimensions are applied to create slight variations in image positioning.
+   - **Random Resized Cropping**: This involves cropping the images from random locations while ensuring that the main part of the character remains visible, and then resizing them back to 224x224 pixels for **VGG16**, **VGG19**, and **ResNet50**, and to 227x227 pixels for **AlexNet**. This approach helps the model learn to focus on different parts of the character images.
+
+3. **Models Used**:
    - **Convolutional Neural Networks (CNNs)**:
      - **AlexNet**
      - **VGG16**
@@ -17,10 +29,10 @@ This project focuses on automating the recognition of handwritten **Amharic char
    - **Alternative Machine Learning Classifiers**:  
      Softmax classifiers are used initially, and they are replaced with **Random Forest**, **XGBoost**, and **Support Vector Machine (SVM)** for comparison.
 
-3. **Transfer Learning**:  
+4. **Transfer Learning**:  
    We leverage pretrained CNN models and fine-tune them for the Amharic character recognition task.
 
-4. **Performance Evaluation**:  
+5. **Performance Evaluation**:  
    The models are evaluated based on the following metrics:
    - **Accuracy**  
    - **Precision**  
@@ -49,14 +61,6 @@ The experiments were run on the following system:
 
 ### Implementation:
 - **Frameworks**: PyTorch, Torchvision
-
-## Dataset Details
-
-- **Total Samples**: 37,752
-- **Training Samples**: 30,201
-- **Validation Samples**: 7,551
-- **Image Size**: 28x28 pixels
-- **Image Type**: JPEG
 
 ## Results
 
@@ -105,3 +109,4 @@ You can install these dependencies by running the following command in your term
 
 ```bash
 pip install torch torchvision scikit-learn matplotlib pandas numpy
+
