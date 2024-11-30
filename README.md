@@ -3,11 +3,6 @@
 
 This project focuses on automating the recognition of handwritten **Amharic characters**, which are a part of the Ethiopian script. The Amharic script consists of 238 unique characters, including 34 basic characters with seven variations representing different vowel sounds. Due to the syllabic nature of the script and variations in handwriting styles, recognizing handwritten Amharic characters is a challenging task. In this project, we employ four convolutional neural network (CNN) architectures—**AlexNet**, **VGG16**, **VGG19**, and **ResNet50**—using transfer learning to improve recognition accuracy.
 
-### Objectives:
-- Experiment with pretrained CNN models for recognizing handwritten Amharic characters.
-- Evaluate the performance of **Softmax classifiers** initially and then explore alternative **machine learning classifiers** such as **Random Forest**, **XGBoost**, and **Support Vector Machine (SVM)**.
-- Compare the performance of the models based on **accuracy**, **precision**, **recall**, and **F1-score**.
-
 ## Methodology
 
 1. **Data Collection & Preprocessing**:  
