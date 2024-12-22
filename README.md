@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project focuses on automating the recognition of handwritten **Amharic characters**, which are a part of the Ethiopian script. The Amharic script consists of 238 unique characters, including 34 basic characters with seven variations representing different vowel sounds. Due to the syllabic nature of the script and variations in handwriting styles, recognizing handwritten Amharic characters is a challenging task. In this project, we employ four convolutional neural network (CNN) architectures—**AlexNet**, **VGG16**, **VGG19**, and **ResNet50**—using transfer learning to improve recognition accuracy.
+This project focuses on automating the recognition of handwritten **Amharic characters**, which are a part of the Ethiopian script. The Amharic script consists of 238 unique characters, including 34 basic characters with seven variations representing different vowel sounds. Due to the syllabic nature of the script and variations in handwriting styles, recognizing handwritten Amharic characters is a challenging task. In this study, we experiment with four convolutional neural network (CNN) architectures—AlexNet, VGG16, VGG19, and ResNet50—utilizing transfer learning for the recognition of handwritten Amharic characters. Initially, we evaluate the performance of the default softmax classifiers in these models. Subsequently, we replace the softmax classifiers with machine learning classifiers, specifically Random Forest, XGBoost, and Support Vector Machine, to compare their performance. The system achieves accuracy, precision, recall, and F1-score values of 91.89%, 92.46%, 91.89%, and 91.80%, respectively.
 
 ## Methodology
 
@@ -71,8 +71,6 @@ The system achieved the following performance metrics:
 - **Recall**: 91.89%
 - **F1-score**: 91.80%
 
-These results demonstrate the effectiveness of using CNN models in combination with transfer learning for the recognition of complex handwritten Amharic characters. Further research could explore incorporating more advanced techniques to improve recognition performance, especially in the context of varying handwriting styles.
-
 ## Key Features
 
 - **High Performance**: The CNN models, especially **ResNet50**, achieved high accuracy in recognizing handwritten Amharic characters.
@@ -81,7 +79,8 @@ These results demonstrate the effectiveness of using CNN models in combination w
 
 ## Conclusion
 
-This project showcases the potential of leveraging transfer learning with CNN models for complex handwritten script recognition tasks. The combination of CNNs and machine learning classifiers like Random Forest, XGBoost, and SVM provides a promising approach for improving recognition accuracy and reliability.
+This work demonstrates the potential of combining CNN models with alternative machine learning classifiers for
+complex handwritten script recognition, laying the groundwork for further advancements in this field.
 
 ## Installation & Usage
 
